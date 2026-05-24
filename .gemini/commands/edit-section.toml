@@ -1,0 +1,17 @@
+description = "Revise an existing report section for clarity, precision, or structure."
+prompt = """
+Follow the shared repo workflow below as the canonical instructions for this task.
+
+@{docs/ai/workflows/edit-section.md}
+
+Use this command when a student asks to revise a section, improve clarity,
+or tighten existing report text.
+
+Preferred deterministic helpers:
+- `python tools/workflow.py outline [target]`
+- `python tools/workflow.py proofread [target] [--section section_key]`
+
+The repo instructions from GEMINI.md and AGENTS.md are already loaded.
+Inspect the current text before editing.
+If the shared workflow doc conflicts with older tool-specific guidance, the shared workflow doc wins.
+"""

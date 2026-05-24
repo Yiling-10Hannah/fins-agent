@@ -1,0 +1,20 @@
+description = "Audit, review, benchmark, harden, or improve a Streamlit coursework app or deployed app."
+prompt = """
+Follow the shared repo workflow below as the canonical instructions for this task.
+
+@{docs/ai/workflows/audit-app.md}
+@{docs/apps/streamlit/audit-checklist.md}
+
+Use this command when a student asks to audit, review, benchmark, harden, or
+improve a Streamlit app. Check current official Streamlit docs for APIs that
+matter to the audit, especially tabs, session state, query params, caching,
+forms, fragments, AppTest, dataframes, config, secrets, and deployment.
+
+Findings should lead, ordered by severity, with exact file or UI surfaces,
+impact, and concrete fixes. Update durable context when the audit reveals a
+reusable lesson.
+
+The repo instructions from GEMINI.md and AGENTS.md are already loaded.
+If the shared workflow doc conflicts with older tool-specific guidance, the
+shared workflow doc wins.
+"""

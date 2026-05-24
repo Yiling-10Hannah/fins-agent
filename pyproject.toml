@@ -1,0 +1,23 @@
+[project]
+name = "fins-agent"
+version = "0.1.0"
+description = "Fintech coursework toolkit built for working closely with AI"
+requires-python = ">=3.13,<3.14"
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "SIM", "RUF"]
+
+[tool.pytest.ini_options]
+addopts = ["--import-mode=importlib"]
+testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["fintools"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

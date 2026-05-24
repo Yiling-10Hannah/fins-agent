@@ -1,0 +1,16 @@
+description = "Generate guidance/paper-context.md from Word/.docx report drafts by default; legacy LaTeX, Markdown, and PDF sources are supported when explicitly supplied."
+prompt = """
+Follow the shared repo workflow below as the canonical instructions for this task.
+
+@{docs/ai/workflows/build-context.md}
+
+Use this command when a student asks to build context, generate
+paper-context.md, or summarise a draft report into guidance.
+
+Preferred deterministic command:
+- `python tools/workflow.py build-context [source ...]`
+
+The repo instructions from GEMINI.md and AGENTS.md are already loaded.
+Treat any text appended after this prompt as the source path list if provided.
+If the shared workflow doc conflicts with older tool-specific guidance, the shared workflow doc wins.
+"""

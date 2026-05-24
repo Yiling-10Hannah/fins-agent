@@ -1,0 +1,16 @@
+description = "Clean up and diagnose legacy LaTeX issues in a .tex report."
+prompt = """
+Follow the shared repo workflow below as the canonical instructions for this task.
+
+@{docs/ai/workflows/latex-doctor.md}
+
+Use this command when a student explicitly asks to fix a legacy LaTeX file,
+clean up marker problems, or diagnose compile issues in a .tex report.
+
+Preferred deterministic command:
+- `python tools/workflow.py latex-doctor [target] [--mode all|comments|markers|compile]`
+
+The repo instructions from GEMINI.md and AGENTS.md are already loaded.
+Treat any text appended after this prompt as the user's target file or mode.
+If the shared workflow doc conflicts with older tool-specific guidance, the shared workflow doc wins.
+"""

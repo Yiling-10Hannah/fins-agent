@@ -1,0 +1,4 @@
+interface:
+  display_name: "Outline Report"
+  short_description: "Review report structure, section balance, and paper context markers."
+  default_prompt: "Outline this report using the outline workflow and flag structure gaps."

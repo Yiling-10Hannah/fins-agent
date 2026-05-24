@@ -1,0 +1,20 @@
+description = "Create, improve, test, or deploy a Streamlit coursework app from data or analysis."
+prompt = """
+Follow the shared repo workflow below as the canonical instructions for this task.
+
+@{docs/ai/workflows/build-app.md}
+@{docs/apps/streamlit/README.md}
+
+Use this command when a student asks to build an app, make a Streamlit app,
+turn analysis into an interactive product, or prepare a public app for grading.
+
+Preferred deterministic commands:
+- `python tools/workflow.py build-app --target projects/my_project --title "My App"`
+- `python tools/workflow.py new-project my_project --with-app --description "..."`
+- `python tools/workflow.py check-app-submission --target projects/my_project`
+- `python tools/workflow.py prepare-app-repo --source projects/my_project --dest ../my_project_handin --repo my_project_handin`
+
+The repo instructions from GEMINI.md and AGENTS.md are already loaded.
+If the shared workflow doc conflicts with older tool-specific guidance, the
+shared workflow doc wins.
+"""

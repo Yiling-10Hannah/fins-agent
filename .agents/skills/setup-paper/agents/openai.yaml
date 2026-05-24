@@ -1,0 +1,4 @@
+interface:
+  display_name: "Setup Word Report"
+  short_description: "Create a Word-first coursework report scaffold by default."
+  default_prompt: "Create a Word-first coursework report scaffold using the setup-paper workflow."

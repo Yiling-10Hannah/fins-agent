@@ -1,0 +1,21 @@
+description = "Create or export publication-quality figures for coursework, reports, slides, or Word documents."
+prompt = """
+Follow the shared repo workflow below as the canonical instructions for this task.
+
+@{docs/ai/workflows/build-figure.md}
+
+Use this command when a student asks to make a figure, improve a plot, validate
+chart data, export a chart for Word/A4, or create report-ready figure files.
+
+Preferred deterministic command:
+- `python tools/workflow.py build-figure --output results/figures`
+- `python tools/workflow.py build-figure-suite data/my_data.csv --style ft --narrative --output results/figures`
+- Use `build-figure-suite` without `--narrative` only when the user wants generic chart coverage rather than a story-first suite.
+
+FT-style validation gallery:
+- `python tools/workflow.py build-figure --style ft --docx --output results/figures-ft`
+
+The repo instructions from GEMINI.md and AGENTS.md are already loaded.
+Treat any text appended after this prompt as the user's figure request or output constraints.
+If the shared workflow doc conflicts with older tool-specific guidance, the shared workflow doc wins.
+"""

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Edit Report Section"
+  short_description: "Revise Word-first coursework report prose for clarity and structure."
+  default_prompt: "Revise this report section using the edit-section workflow and Word-first writing rules."

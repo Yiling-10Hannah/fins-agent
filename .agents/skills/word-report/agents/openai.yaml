@@ -1,0 +1,4 @@
+interface:
+  display_name: "Word Report"
+  short_description: "Create, inspect, format, or troubleshoot a Word coursework report."
+  default_prompt: "Review or improve this Word report using the word-report workflow."

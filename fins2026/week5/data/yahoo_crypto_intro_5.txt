@@ -1,0 +1,6 @@
+# Week 5 Yahoo crypto warm-up universe
+BTC-USD
+ETH-USD
+XRP-USD
+ADA-USD
+DOGE-USD

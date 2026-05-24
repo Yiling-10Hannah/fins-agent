@@ -1,0 +1,6 @@
+interface:
+  display_name: "Legacy LaTeX Doctor"
+  short_description: "Diagnose explicit legacy LaTeX source or compile problems."
+  default_prompt: "Diagnose this explicit legacy LaTeX issue using the latex-doctor workflow."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,4 @@
+interface:
+  display_name: "New Project"
+  short_description: "Scaffold a coursework project with code, report, results, and optional app folders."
+  default_prompt: "Create a new coursework project using the new-project workflow."

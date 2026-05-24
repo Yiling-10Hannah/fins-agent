@@ -1,0 +1,65 @@
+name: Submission Check
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submission-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Detect submission metadata
+        id: submission
+        shell: bash
+        run: |
+          if [ ! -f submission.json ]; then
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "No root submission.json found; skipping submission check."
+            exit 0
+          fi
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          data = json.loads(Path("submission.json").read_text(encoding="utf-8"))
+          target = str(data.get("target", "")).strip()
+          entrypoint = str(data.get("entrypoint", "")).strip()
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as handle:
+              handle.write("present=true\n")
+              handle.write(f"target={target}\n")
+              handle.write(f"entrypoint={entrypoint}\n")
+          PY
+
+      - name: Set up Python 3.13
+        if: steps.submission.outputs.present == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install dependencies
+        if: steps.submission.outputs.present == 'true'
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          if [ -f requirements-dev.txt ]; then
+            python -m pip install -r requirements-dev.txt
+          fi
+
+      - name: Run submission readiness check
+        if: steps.submission.outputs.present == 'true'
+        shell: bash
+        run: |
+          python tools/workflow.py check-app-submission \
+            --target "${{ steps.submission.outputs.target }}" \
+            --entrypoint "${{ steps.submission.outputs.entrypoint }}" \
+            --run-tests

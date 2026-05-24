@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scaffold Week"
+  short_description: "Create or backfill the standard weekly scaffold under fins2026/weekN."
+  default_prompt: "Scaffold this weekly folder using the scaffold-week workflow."

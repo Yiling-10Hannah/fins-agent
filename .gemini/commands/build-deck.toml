@@ -1,0 +1,19 @@
+description = "Create, revise, or structure a PowerPoint-first presentation deck."
+prompt = """
+Follow the shared repo workflow below as the canonical instructions for this task.
+
+@{docs/ai/workflows/build-deck.md}
+
+Use this command when a student asks to build the deck, revise slides,
+make a PowerPoint presentation, or turn a report into a presentation.
+
+PowerPoint is the default deck format. Do not use LaTeX, Beamer, or
+`pdflatex` unless the student explicitly asks for legacy `.tex` slides.
+
+Legacy deterministic command, only for explicit Beamer targets:
+- `python tools/workflow.py build-deck [path/to/deck.tex]`
+
+The repo instructions from GEMINI.md and AGENTS.md are already loaded.
+Treat any text appended after this prompt as the user's deck target or request.
+If the shared workflow doc conflicts with older tool-specific guidance, the shared workflow doc wins.
+"""

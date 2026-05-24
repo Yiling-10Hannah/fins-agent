@@ -1,0 +1,4 @@
+interface:
+  display_name: "Proofread Report"
+  short_description: "Check Word-first report prose for mechanics, spacing, and style issues."
+  default_prompt: "Proofread this report section using the proofread workflow."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Week Context"
+  short_description: "Generate guidance/week-context.md, data-context.md, and output-context.md for a week."
+  default_prompt: "Build the generated guidance context files for this week using the build-week-context workflow."

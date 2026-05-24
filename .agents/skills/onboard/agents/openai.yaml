@@ -1,0 +1,4 @@
+interface:
+  display_name: "Onboard Student"
+  short_description: "Set up or verify the repo environment for a first-time student."
+  default_prompt: "Help me set up or verify this repo using the onboard workflow."

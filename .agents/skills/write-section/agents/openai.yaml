@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Report Section"
+  short_description: "Draft Word-first coursework report prose using the repo writing rules."
+  default_prompt: "Draft this report section using the write-section workflow and Word-first writing rules."

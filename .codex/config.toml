@@ -1,0 +1,20 @@
+#:schema https://developers.openai.com/codex/config-schema.json
+
+# Project-scoped Codex configuration for fins-agent.
+#
+# Codex also reads:
+# - AGENTS.md for persistent repo instructions
+# - .agents/skills/ for reusable repo skills
+#
+# Codex loads this project file only after the project is trusted. Keep model,
+# sandbox, and approval preferences in the student's user-level config so this
+# repo does not override local safety or cost choices.
+#
+# Hooks are intentionally omitted for now because current Codex hooks support
+# does not cover Windows.
+
+project_root_markers = [".git"]
+
+[mcp_servers.openaiDeveloperDocs]
+# Official OpenAI docs MCP for Codex, skills, and API reference checks.
+url = "https://developers.openai.com/mcp"

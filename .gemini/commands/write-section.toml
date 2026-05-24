@@ -1,0 +1,17 @@
+description = "Draft a report section using the repo Word-first writing rules."
+prompt = """
+Follow the shared repo workflow below as the canonical instructions for this task.
+
+@{docs/ai/workflows/write-section.md}
+
+Use this command when a student asks to draft a section, write an
+introduction, or create a new report subsection.
+
+Preferred deterministic helpers:
+- `python tools/workflow.py outline [target]`
+- `python tools/workflow.py proofread [target] [--section section_key]`
+
+The repo instructions from GEMINI.md and AGENTS.md are already loaded.
+Inspect the relevant report files before drafting.
+If the shared workflow doc conflicts with older tool-specific guidance, the shared workflow doc wins.
+"""

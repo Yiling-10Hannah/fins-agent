@@ -1,0 +1,16 @@
+description = "Review a report's structure, balance, and section markers."
+prompt = """
+Follow the shared repo workflow below as the canonical instructions for this task.
+
+@{docs/ai/workflows/outline.md}
+
+Use this command when a student asks to outline the report, check the
+structure, or review section balance.
+
+Preferred deterministic command:
+- `python tools/workflow.py outline [target]`
+
+The repo instructions from GEMINI.md and AGENTS.md are already loaded.
+Inspect the current report files before giving structural feedback.
+If the shared workflow doc conflicts with older tool-specific guidance, the shared workflow doc wins.
+"""

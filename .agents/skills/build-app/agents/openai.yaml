@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Streamlit App"
+  short_description: "Create or improve a coursework Streamlit app from analysis outputs."
+  default_prompt: "Build or improve this coursework Streamlit app using the build-app workflow and course app standards."

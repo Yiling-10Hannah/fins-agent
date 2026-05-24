@@ -1,0 +1,16 @@
+description = "Generate guidance/week-context.md, guidance/data-context.md, and guidance/output-context.md for a weekly folder."
+prompt = """
+Follow the shared repo workflow below as the canonical instructions for this task.
+
+@{docs/ai/workflows/build-week-context.md}
+
+Use this command when a student asks to build week context, refresh a week's
+guidance files, or summarize the current state of a week folder.
+
+Preferred deterministic command:
+- `python tools/workflow.py build-week-context --target fins2026/weekN`
+
+The repo instructions from GEMINI.md and AGENTS.md are already loaded.
+Treat any text appended after this prompt as the target week path if provided.
+If the shared workflow doc conflicts with older tool-specific guidance, the shared workflow doc wins.
+"""

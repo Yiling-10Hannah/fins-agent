@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build PowerPoint Deck"
+  short_description: "Create, revise, or structure a PowerPoint-first coursework presentation."
+  default_prompt: "Build or revise this PowerPoint-first presentation using the build-deck workflow."

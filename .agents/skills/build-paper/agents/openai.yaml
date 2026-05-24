@@ -1,0 +1,6 @@
+interface:
+  display_name: "Build Legacy LaTeX Paper"
+  short_description: "Compile an explicit legacy LaTeX paper with pdflatex and bibtex."
+  default_prompt: "Compile this explicit legacy LaTeX paper using the build-paper workflow."
+policy:
+  allow_implicit_invocation: false

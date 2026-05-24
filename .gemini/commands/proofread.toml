@@ -1,0 +1,16 @@
+description = "Proofread Word/.docx report prose by default; legacy LaTeX is supported only when an explicit .tex target is supplied."
+prompt = """
+Follow the shared repo workflow below as the canonical instructions for this task.
+
+@{docs/ai/workflows/proofread.md}
+
+Use this command when a student asks to proofread a section, check writing
+mechanics, or scan report prose for spacing and formatting issues.
+
+Preferred deterministic command:
+- `python tools/workflow.py proofread [target] [--section section_key] [--lines start-end]`
+
+The repo instructions from GEMINI.md and AGENTS.md are already loaded.
+Inspect the target file before reporting findings.
+If the shared workflow doc conflicts with older tool-specific guidance, the shared workflow doc wins.
+"""

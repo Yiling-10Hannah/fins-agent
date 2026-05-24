@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Figure"
+  short_description: "Create, validate, or export Word/A4-ready coursework figures."
+  default_prompt: "Create or improve report-ready figures using the build-figure workflow."

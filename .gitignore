@@ -1,0 +1,88 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.cache/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+
+# IDE (JetBrains)
+**/.idea/
+
+# Editor backups
+*~
+~$*.docx
+*.swp
+*.swo
+.Rhistory
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets
+.env
+.env.*
+.streamlit/secrets.toml
+**/.streamlit/secrets.toml
+
+# Claude Code local (auto-created, not shared)
+.claude/settings.local.json
+
+# Maintainer-only private notes and release prep files
+.maintainers/
+
+# Local temp sandboxes and verification state
+.tmp-*
+.tmp*/
+tmp*/
+fintools/datasets/validation/_raw/
+fintools/datasets/validation/_refresh/
+**/results/figures/*.png
+**/results/figures/*.pdf
+**/results/figures/*.caption.md
+**/results/figures/*.docx
+**/results/figures/_checks/
+**/results/figures/**/
+**/results/data/**
+!**/results/data/.gitkeep
+**/results/tables/**
+!**/results/tables/.gitkeep
+**/results/forecasts/**
+**/results/app/**
+!**/results/app/.gitkeep
+**/app/.streamlit/cache/
+**/app/screenshots/
+
+# NOTE: .vscode/settings.json is intentionally committed -
+# it gives students seamless Python interpreter detection.
+
+# Maintainer-only solution folders (instructor reference; never distributed)
+**/_solutions/

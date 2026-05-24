@@ -1,0 +1,32 @@
+description = "Set up a new student in this repo, including Python 3.13 install guidance, packages, and Word report tooling."
+prompt = """
+Follow the shared repo workflow below as the canonical instructions for this task.
+
+@{docs/ai/workflows/onboard.md}
+
+Use this command when a student asks to be set up, onboarded, or guided
+through first-time repo setup.
+
+Bootstrap rule:
+- if Python 3.13 is missing, help install Python 3.13 first
+- warn but continue if `ripgrep` (`rg`) is missing; it only speeds up
+  AI-assisted repo search
+- for a true first-time setup, use the OS bootstrap script from the repo root
+- only use `python tools/workflow.py onboard` after a usable Python command exists
+
+Preferred deterministic commands:
+- Windows: `powershell -ExecutionPolicy Bypass -File tools/bootstrap_windows.ps1`
+- macOS: `bash tools/bootstrap_macos.sh`
+- Agent helper: `python tools/workflow.py onboard`
+- Verify only: `python tools/workflow.py onboard --check`
+- Intentional rebuild: `python tools/workflow.py onboard --rebuild`
+
+PyCharm note:
+- prefer PyCharm's built-in terminal for setup commands so the IDE and
+  terminal use the same repo root
+- on Windows, close Python Console tabs and running apps that use `.venv`
+  before repair or rebuild
+
+The repo instructions from GEMINI.md and AGENTS.md are already loaded.
+If the shared workflow doc conflicts with older tool-specific guidance, the shared workflow doc wins.
+"""

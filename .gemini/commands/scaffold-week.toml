@@ -1,0 +1,16 @@
+description = "Create or backfill the standard weekly scaffold under fins2026/weekN with docs, data, scripts, scratch, results, guidance, prompts, app, and tests."
+prompt = """
+Follow the shared repo workflow below as the canonical instructions for this task.
+
+@{docs/ai/workflows/scaffold-week.md}
+
+Use this command when a student asks to scaffold a week, standardize a week
+folder, or backfill fins2026/weekN with the standard weekly structure.
+
+Preferred deterministic command:
+- `python tools/workflow.py scaffold-week --target fins2026/weekN [--title ...]`
+
+The repo instructions from GEMINI.md and AGENTS.md are already loaded.
+Treat any text appended after this prompt as the target week request.
+If the shared workflow doc conflicts with older tool-specific guidance, the shared workflow doc wins.
+"""

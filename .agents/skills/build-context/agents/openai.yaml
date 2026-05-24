@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Report Context"
+  short_description: "Summarize a Word-first report draft into guidance/paper-context.md."
+  default_prompt: "Build guidance/paper-context.md from this report draft using the build-context workflow."

@@ -1,0 +1,16 @@
+description = "Compile a legacy LaTeX paper and report warnings or errors."
+prompt = """
+Follow the shared repo workflow below as the canonical instructions for this task.
+
+@{docs/ai/workflows/build-paper.md}
+
+Use this command when a student asks to build the paper, compile the
+report, or make the PDF.
+
+Preferred deterministic command:
+- `python tools/workflow.py build-paper [target] [--quick]`
+
+The repo instructions from GEMINI.md and AGENTS.md are already loaded.
+Treat any text appended after this prompt as the user's compile target or options.
+If the shared workflow doc conflicts with older tool-specific guidance, the shared workflow doc wins.
+"""

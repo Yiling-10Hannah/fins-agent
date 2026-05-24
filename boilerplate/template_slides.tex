@@ -1,0 +1,201 @@
+% =============================================================================
+%  Student Course Presentation Template
+%  Based on project presentation rules (see .claude/rules/presentation-rules.md)
+%  Replace all [REMOVE ...] placeholders with your content, then delete the tags.
+% =============================================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+
+% ---------------------------------------------------------------------------
+%  Colour palette (professional academic)
+% ---------------------------------------------------------------------------
+\definecolor{navy}{HTML}{1A365D}        % Headers, titles
+\definecolor{darkgray}{HTML}{2D3748}    % Body text
+\definecolor{crimson}{HTML}{9B2335}     % Emphasis, key results
+\definecolor{forest}{HTML}{276749}      % Positive / adjusted values
+\definecolor{steel}{HTML}{4A5568}       % Tertiary, captions
+\definecolor{warmgray}{HTML}{E2D8CC}    % Background tint (sparingly)
+\definecolor{lightgray}{HTML}{F7FAFC}   % Slide background
+
+% ---------------------------------------------------------------------------
+%  Beamer chrome
+% ---------------------------------------------------------------------------
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+\setbeamercolor{frametitle}{fg=navy,bg=white}
+\setbeamercolor{title}{fg=navy}
+\setbeamercolor{subtitle}{fg=steel}
+\setbeamercolor{author}{fg=darkgray}
+\setbeamercolor{date}{fg=steel}
+\setbeamercolor{normal text}{fg=darkgray}
+\setbeamercolor{itemize item}{fg=steel}
+\setbeamercolor{itemize subitem}{fg=steel}
+\setbeamercolor{alerted text}{fg=crimson}
+\setbeamercolor{structure}{fg=navy}
+
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\setbeamerfont{title}{series=\bfseries,size=\Large}
+
+% ---------------------------------------------------------------------------
+%  Packages
+% ---------------------------------------------------------------------------
+\usepackage{booktabs}
+\usepackage{graphicx}
+
+% ---------------------------------------------------------------------------
+%  Custom commands
+% ---------------------------------------------------------------------------
+% Highlight a key number (crimson, bold)
+\newcommand{\emphnum}[1]{{\color{crimson}\textbf{#1}}}
+
+% Positive result number (forest green, bold)
+\newcommand{\goodnum}[1]{{\color{forest}\textbf{#1}}}
+
+% Full-slide transition (plain frame, centered text)
+\newcommand{\transitionslide}[1]{%
+  \begin{frame}[plain]
+  \vfill\centering
+  {\Large\color{navy}\textbf{#1}}
+  \vfill
+  \end{frame}
+}
+
+% Takeaway box (shaded, centered)
+\newcommand{\takeaway}[1]{%
+  \begin{center}
+  \colorbox{lightgray}{\parbox{0.85\textwidth}{%
+    \centering\color{navy}\textbf{#1}%
+  }}
+  \end{center}
+}
+
+% =============================================================================
+%  DOCUMENT
+% =============================================================================
+\begin{document}
+
+% --- Slide 1: Title ---------------------------------------------------------
+\begin{frame}[plain]
+\vfill
+\begin{center}
+  {\Large\color{navy}\textbf{[REMOVE Your Presentation Title]}}\\[12pt]
+  {\normalsize\color{darkgray}[REMOVE Your Full Name]\\
+  Student ID: [REMOVE z1234567]\\[6pt]
+  \color{steel}[REMOVE FINS0000] --- [REMOVE Course Name]\\
+  [REMOVE Semester, Year]}
+\end{center}
+\vfill
+\end{frame}
+
+% --- Slide 2: Hook -----------------------------------------------------------
+% NOTE: Open with one concrete, surprising fact. No bullet lists here.
+\begin{frame}{[REMOVE Assertion title: state the surprising fact]}
+  \vfill
+  \centering
+  {\large [REMOVE One sentence or striking statistic that motivates
+  the audience to care about your topic.]}
+  \vfill
+\end{frame}
+
+% --- Slide 3: Research question ----------------------------------------------
+% NOTE: State the question clearly and explain why it matters.
+\begin{frame}{[REMOVE Why this question matters for \ldots]}
+  \begin{itemize}
+    \item \textbf{Research question}: [REMOVE State the precise question]
+    \item \textbf{Why it matters}: [REMOVE One-sentence stakes]
+  \end{itemize}
+\end{frame}
+
+% --- Slide 4: Data -----------------------------------------------------------
+% NOTE: Title should be an assertion, e.g. "Our sample covers 2,400 stocks".
+\begin{frame}{[REMOVE Assertion about your data scope]}
+  \begin{itemize}
+    \item \textbf{Source}: [REMOVE e.g.\ CRSP, Bloomberg, Yahoo Finance]
+    \item \textbf{Sample}: [REMOVE e.g.\ 500 ASX-listed firms]
+    \item \textbf{Period}: [REMOVE e.g.\ January 2015 -- December 2025]
+    \item \textbf{Frequency}: [REMOVE e.g.\ daily / monthly returns]
+  \end{itemize}
+\end{frame}
+
+% --- Slide 5: Method ---------------------------------------------------------
+\transitionslide{Method}
+
+\begin{frame}{[REMOVE Assertion describing your method]}
+  % NOTE: Explain what you did, not textbook theory.
+  \begin{enumerate}
+    \item [REMOVE Step 1 of your method]
+    \item [REMOVE Step 2 of your method]
+    \item [REMOVE Step 3 of your method]
+  \end{enumerate}
+\end{frame}
+
+% --- Slides 7--9: Results (assertion titles) ---------------------------------
+\transitionslide{Results}
+
+% Example table slide
+\begin{frame}{[REMOVE Assertion title: state the finding]}
+  % NOTE: Show only the 2--3 rows that matter. Bold the key coefficient.
+  \begin{table}
+    \centering\small
+    \begin{tabular}{@{}lcc@{}}
+      \toprule
+      & Return (\%) & $t$-stat \\
+      \midrule
+      [REMOVE Factor 1] & \emphnum{[REMOVE 0.42]} & [REMOVE 2.31] \\
+      [REMOVE Factor 2] & \goodnum{[REMOVE 0.18]}  & [REMOVE 1.96] \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \smallskip
+  {\small\color{steel} [REMOVE Source note or sample details]}
+\end{frame}
+
+% Example figure slide
+\begin{frame}{[REMOVE Assertion title: what the chart shows]}
+  \begin{center}
+    % Replace the placeholder box with your figure:
+    %   \includegraphics[width=0.8\textwidth]{figures/your_figure.pdf}
+    \fbox{\parbox{0.7\textwidth}{\centering\vspace{3cm}%
+      \color{steel}[REMOVE Replace with figure]\vspace{3cm}}}
+  \end{center}
+  {\small\color{steel} [REMOVE One-sentence caption]}
+\end{frame}
+
+% Additional results slide (add or remove as needed)
+\begin{frame}{[REMOVE Third assertion about results]}
+  \begin{itemize}
+    \item [REMOVE Key finding with \emphnum{number}]
+    \item [REMOVE Supporting evidence with \goodnum{positive number}]
+  \end{itemize}
+\end{frame}
+
+% --- Slide 10: Limitations ---------------------------------------------------
+\begin{frame}{[REMOVE Strongest objection or key limitations]}
+  % NOTE: State the critique fairly, then respond with evidence.
+  \begin{itemize}
+    \item \textbf{Limitation 1}: [REMOVE e.g.\ survivorship bias]
+    \item \textbf{Limitation 2}: [REMOVE e.g.\ short sample period]
+    \item \textbf{Robustness}: [REMOVE Results survive X, Y, and Z]
+  \end{itemize}
+\end{frame}
+
+% --- Slide 11: Takeaway ------------------------------------------------------
+% NOTE: End with the ONE thing the audience should remember. No "Questions?" slide.
+\begin{frame}{[REMOVE The single takeaway]}
+  \vfill
+  \takeaway{[REMOVE One sentence the audience remembers after they forget
+  everything else.]}
+  \vfill
+\end{frame}
+
+% --- Backup slides -----------------------------------------------------------
+\appendix
+\transitionslide{Backup Slides}
+
+\begin{frame}{[REMOVE Backup: additional detail for Q\&A]}
+  [REMOVE Content that supports anticipated questions]
+\end{frame}
+
+\end{document}

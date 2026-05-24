@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audit Streamlit App"
+  short_description: "Benchmark a Streamlit coursework app against current docs and course standards."
+  default_prompt: "Audit this Streamlit app against current Streamlit best practices and the course app checklist. Identify defects, prioritize fixes, and update reusable context when needed."

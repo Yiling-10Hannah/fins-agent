@@ -1,0 +1,19 @@
+description = "Create, inspect, format, or troubleshoot a Word report."
+prompt = """
+Follow the shared repo workflow below as the canonical instructions for this task.
+
+@{docs/ai/workflows/word-report.md}
+
+Use this command when a student asks to create, inspect, format,
+troubleshoot, or improve a Word report or .docx coursework paper.
+
+Preferred deterministic commands:
+- `python tools/workflow.py setup-paper --title "..." [--authors "..."] [--topic "..."] [--target .]`
+- `python tools/workflow.py word-report [target]`
+- `python tools/workflow.py outline [target]`
+- `python tools/workflow.py proofread [target]`
+
+The repo instructions from GEMINI.md and AGENTS.md are already loaded.
+Treat any text appended after this prompt as the user's Word report request.
+If the shared workflow doc conflicts with older tool-specific guidance, the shared workflow doc wins.
+"""

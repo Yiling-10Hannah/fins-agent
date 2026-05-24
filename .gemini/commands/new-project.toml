@@ -1,0 +1,16 @@
+description = "Create a new coursework project scaffold under projects/ with report, code, scripts, data, and results folders."
+prompt = """
+Follow the shared repo workflow below as the canonical instructions for this task.
+
+@{docs/ai/workflows/new-project.md}
+
+Use this command when a student asks to create a new project, scaffold a
+project, or make a project folder for a report.
+
+Preferred deterministic command:
+- `python tools/workflow.py new-project <name> [--description ...] [--datasets ...] [--notes ...] [--setup-paper]`
+
+The repo instructions from GEMINI.md and AGENTS.md are already loaded.
+Treat any text appended after this prompt as the user's project request.
+If the shared workflow doc conflicts with older tool-specific guidance, the shared workflow doc wins.
+"""
