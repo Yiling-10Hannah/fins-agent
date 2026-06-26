@@ -76,12 +76,13 @@ from .stage3_portfolio_figures import (
     make_stage3_figure_pack,
     stage3_figure_dir,
 )
+from fintools.portfolio_math import PSEUDOINVERSE_COND_THRESHOLD
+
 from .stage3_portfolios import (
     DEFAULT_STAGE3_DATA_ROOT,
     DEFAULT_STAGE3_TABLE_ROOT,
     PORTFOLIO_COLUMN_ORDER,
     PORTFOLIO_LABELS,
-    PSEUDOINVERSE_COND_THRESHOLD,
     SQRT_252,
     TRADING_DAYS_PER_YEAR,
     Stage3ProviderSpec,
